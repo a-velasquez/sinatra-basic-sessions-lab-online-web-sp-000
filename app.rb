@@ -7,7 +7,12 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    erb :index 
+    erb :index
+  end
+
+  post '/chekout' do
+    session[:item] = params[:item]
+
   end
 
 
